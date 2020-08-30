@@ -1,0 +1,564 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../../font-awesome/poppins/Poppins-Regular.ttf"); }
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../../font-awesome/poppins/Poppins-Bold.ttf"); }
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../../font-awesome/poppins/Poppins-Medium.ttf"); }
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../../font-awesome/montserrat/Montserrat-Bold.ttf"); }
+body, p, input, label {
+  font-family: Poppins-Regular; }
+
+header .menu {
+  text-align: center;
+  background-color: #46a;
+  color: #f1f1f1;
+  font-family: Courier New;
+  padding: 10px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%; }
+  header .menu #logout {
+    font-family: Ubuntu;
+    float: right;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    padding: 14px;
+    -webkit-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s; }
+    header .menu #logout:hover {
+      text-decoration: none;
+      border: 1px solid #333;
+      padding: 16px; }
+
+nav ul {
+  background: #f1f1f1;
+  font-family: Poppins-Medium;
+  position: fixed;
+  margin: 0;
+  margin-top: 76px;
+  padding: 0;
+  list-style-type: none;
+  width: 20%;
+  height: 100%;
+  overflow-y: auto; }
+  nav ul li a, nav ul li button {
+    display: block;
+    background: #f1f1f1;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    color: #434343;
+    -webkit-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    nav ul li a:hover, nav ul li button:hover {
+      text-decoration: none;
+      color: #fafafa;
+      background-color: #46a;
+      filter: alpha(opacity=70);
+      opacity: .7; }
+
+footer {
+  background-color: #7d7d7d;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: #e0e0e0;
+  padding: 50px; }
+  footer h6 {
+    font-size: 12px; }
+
+::placeholder {
+  color: #46a;
+  opacity: .4;
+  /* Firefox */ }
+
+.max-width {
+  margin-left: 20%; }
+
+.student-form {
+  padding: 16px;
+  margin: 16px;
+  position: absolute;
+  top: 70px;
+  box-sizing: border-box;
+  width: 75%;
+  height: auto;
+  z-index: -1;
+  background: #fff;
+  border-radius: 15px;
+  margin-bottom: 50px; }
+  .student-form h3 {
+    text-align: center;
+    color: #46a;
+    padding: 16px; }
+  .student-form form {
+    margin-bottom: 100px; }
+    .student-form form input[type=text], .student-form form input[type=phone], .student-form form input[type=email], .student-form form input[type=date], .student-form form input[type=submit], .student-form form select {
+      width: 100%;
+      border-radius: 4px;
+      border: none;
+      border: 1px solid #999;
+      padding: 10px;
+      color: #999;
+      background: #fff;
+      font-weight: 600;
+      color: #46a; }
+      .student-form form input[type=text]:focus, .student-form form input[type=phone]:focus, .student-form form input[type=email]:focus, .student-form form input[type=date]:focus, .student-form form input[type=submit]:focus, .student-form form select:focus {
+        background: #46a;
+        color: #fff; }
+    .student-form form input, .student-form form label {
+      margin-bottom: 8px; }
+    .student-form form input[type=submit] {
+      background: linear-gradient(80deg, #46a, #9fc);
+      color: #fff;
+      cursor: pointer;
+      -webkit-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
+      .student-form form input[type=submit]:hover {
+        filter: alpha(opacity=50);
+        opacity: .5; }
+
+input[type=search] {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid #888;
+  padding: 10px;
+  margin-bottom: 16px; }
+
+#modal, .customSMS p, .customSMS {
+  text-align: center;
+  margin: 16px 0;
+  height: 100%; }
+  #modal img, .customSMS p img, .customSMS img {
+    width: 30%; }
+
+.check {
+  background-color: #3c5a98;
+  color: #fafafa;
+  padding: 10px 24px;
+  cursor: pointer;
+  border: none; }
+
+/*modal*/
+.cssb {
+  background: #46a;
+  font-family: sans-serif;
+  padding: 16px;
+  text-align: center;
+  border-radius: 8px;
+  margin: auto;
+  width: 400px;
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.5); }
+  .cssb .modal-p {
+    color: #b2b2b2; }
+  .cssb button {
+    transform: translate(-10%, 10%);
+    background: #f2f2f8;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    padding: 10px 16px;
+    margin: 0 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #222;
+    overflow: hidden; }
+    .cssb button:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: #ff003b;
+      transition: .5s ease;
+      z-index: -1; }
+    .cssb button:hover:before {
+      left: 0; }
+
+/*===================================
+            Extra button Start
+=====================================*/
+.extra-funds {
+  margin-top: 20px;
+  background: #3c5a98;
+  border: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  color: #fafafa; }
+
+/*===================================
+            Extra button Close
+=====================================*/
+/*===================================
+    Upload Button Design start
+===================================*/
+.file-upload {
+  position: relative;
+  display: inline-block;
+  top: 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  -webkit-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+  .file-upload:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5); }
+
+.file-upload__label {
+  display: block;
+  width: 100%;
+  padding: 1em 2em;
+  color: #fff;
+  background: #46a;
+  border-radius: 4px;
+  -webkit-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease; }
+  .file-upload__label:hover {
+    cursor: pointer;
+    background: #46a;
+    filter: alpha(opacity=50);
+    opacity: .5; }
+
+.file-upload__input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 1;
+  width: 0;
+  height: 100%;
+  opacity: 0; }
+
+/*===================================
+    Upload Button Design close
+===================================*/
+/*/modal*/
+.list {
+  border: 2px solid #444;
+  background: #7d7d7d;
+  color: #e0e0e0;
+  padding: 20px 10px;
+  margin-top: 16px; }
+  .list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+
+.back {
+  background: #fff;
+  border: none;
+  border: 1px solid #999;
+  padding: 6px 24px;
+  cursor: pointer;
+  color: #7d7d7d;
+  -webkit-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease; }
+  .back:hover {
+    background: #46a;
+    text-decoration: none;
+    color: #fafafa; }
+
+/*===========================================
+    Dashboard Design
+===========================================*/
+.signle-portfolio {
+  position: relative;
+  margin: 50px 16px;
+  overflow: hidden; }
+
+.portfolio-img {
+  -webkit-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  max-width: 100%;
+  max-height: 125px;
+  overflow: hidden; }
+
+.portfolio-text {
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 80px 10px;
+  font-weight: 600;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease; }
+
+.signle-portfolio:hover .portfolio-text {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  height: 100%;
+  width: 100%; }
+
+.signle-portfolio:hover .portfolio-img {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15); }
+
+/*===========================================
+    Dashboard Design close
+===========================================*/
+/*===========================================
+    Rent Design
+===========================================*/
+.data-retrive {
+  padding: 16px; }
+  .data-retrive ul {
+    list-style-type: none;
+    background: #7d7d7d;
+    color: #e0e0e0;
+    height: auto;
+    font-size: 40px;
+    margin: 16px;
+    border: 1px solid #b2b2b2;
+    padding: 16px; }
+
+/*===========================================
+    Rent Design Close
+===========================================*/
+/*=========================================
+        Table Design Start
+==========================================*/
+.backg {
+  background: #f2f2f2;
+  background-size: auto; }
+
+.table100 {
+  max-width: 500px;
+  margin: auto;
+  display: block;
+  border-radius: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  background: #fff; }
+
+.header {
+  text-align: center;
+  color: #78e; }
+
+table {
+  font-family: 'Calibri','Arial';
+  text-align: center;
+  overflow: hidden;
+  border-radius: 40px;
+  width: 100%; }
+  table tr.round {
+    background: #78e;
+    border-radius: 40px; }
+  table th, table td {
+    padding: 10px; }
+  table tr:nth-child(even) {
+    background: #ccf; }
+
+.table1002 {
+  max-width: 600px;
+  margin: auto;
+  display: block;
+  border-radius: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  background: #fff;
+  overflow-x: auto; }
+
+.table1003 {
+  max-width: 800px;
+  margin: auto;
+  display: block;
+  border-radius: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  background: #fff;
+  overflow-x: auto; }
+
+.max-height {
+  overflow-y: auto;
+  max-height: 500px; }
+
+/*=========================================
+        Table Design Close
+==========================================*/
+/*========================================
+        Total Fee Collection Start
+==========================================*/
+.img-design {
+  border-radius: 4px;
+  outline-border: 1px solid #999; }
+
+.totalCollection {
+  max-width: 500px;
+  margin: auto;
+  display: block;
+  border-radius: 40px;
+  background: #fff;
+  overflow-x: none;
+  padding: 10px 0;
+  color: #333; }
+  .totalCollection ul {
+    list-style-type: none; }
+    .totalCollection ul li {
+      border: 1px solid #78e;
+      padding: 10px;
+      margin: 10px; }
+      .totalCollection ul li > span {
+        text-align: left;
+        float: right; }
+
+/*========================================
+        Total Fee Collection Close
+==========================================*/
+/*========================================
+        Calculation button Id Start
+==========================================*/
+.fixed-button {
+  position: fixed;
+  height: 400px;
+  overflow-y: auto;
+  top: 20%;
+  background: #46a;
+  padding: 0 10px;
+  border-radius: 0 6px 6px 0; }
+  .fixed-button a {
+    position: relative;
+    text-align: left;
+    display: block;
+    margin: 0 4px;
+    color: #fff;
+    padding: 10px;
+    -webkit-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    .fixed-button a:hover {
+      left: .2em;
+      text-decoration: none;
+      color: #fafafa; }
+
+/*========================================
+        Calculation button Id Close
+==========================================*/
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 100%; }
+    nav ul li {
+      text-align: center; } }
+@media screen and (max-width: 992px) {
+  .student-form {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 95%;
+    margin: 0 16px 30px;
+    padding: 0; }
+
+  nav ul {
+    display: none; }
+
+  .sideBar {
+    display: block;
+    font-weight: 900;
+    padding: 8px;
+    color: #46a;
+    font-size: 24px; }
+    .sideBar:hover {
+      text-decoration: none; }
+
+  .row {
+    margin: 0;
+    padding: 0; } }
+@media (min-width: 992px) {
+  #Nav {
+    display: block !important; }
+
+  #Close {
+    display: none; } }
+@media screen and (min-width: 992px) {
+  .sideBar {
+    display: none; }
+
+  #Close {
+    display: none; } }
+@media screen and (max-width: 600px) {
+  .portfolio-img {
+    width: 100%;
+    height: 100%; } }
+@media screen and (max-width: 992px) {
+  .fixed-button {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 20px; }
+
+  .fixed-buttons {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    background: #46a;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 60%;
+    color: #fff; } }
+@media screen and (max-width: 600px) {
+  .customSMS img {
+    width: 100px; } }
+@media screen and (max-width: 768px) {
+  .menu .none-typed {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */

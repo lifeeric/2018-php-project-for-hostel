@@ -1,0 +1,174 @@
+<?php
+
+    date_default_timezone_set('Asia/Karachi');
+    require_once '../Core/init.php';
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> 404 Hostel Edu </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="../logo.png"/>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <script  src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/popper.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/lib/typed.js"></script>
+    <link rel="stylesheet" href="../public/css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <style>
+    body
+    {
+        background: #f1f1f1;
+    }
+        .error
+        {
+            border: 1px solid #222;
+            padding: 100px 40px;
+            border-radius: 20px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            background: #fff;
+            text-align: center;
+
+        }
+        .error h1
+        {
+            font-size: 90px;
+            font-weight: 900;
+            margin: 0 100px;
+        }
+        .dot-style
+        {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+        .dot
+        {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            display: inline-block;
+            border-radius: 50%;
+
+        }
+        .error a 
+        {
+            position: absolute;
+            top: 75%;
+            left: 40%;
+            border: 1px solid #3c5a98;
+            color: #111;
+            padding: 10px 16px;
+            overflow: hidden;
+        }
+        .error a:before
+        {
+            content: '';
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ef3934;
+            transition: .5s ease;
+            z-index: -1;
+        }
+        .error a:hover:before
+        {
+            bottom: 0;
+            color: #fff;
+            z-index: -1;
+        }
+        .error a:hover
+        {
+            text-decoration: none;
+        }
+        .error:before
+        {
+            content: '';
+            position: absolute;
+            top: -88%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ef3934;
+        }
+        footer
+        {
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Header-->
+    <header>
+        <div class="menu animated bounceInUp">
+            <a href="spa.php" style="float: left;">
+                <img src="../public/images/logo3.png" style="width: 80px;">
+            </a>
+            <a id="logout" href="../includes/logout.php"> Log Out </a>
+            
+            <div class="none-typed">
+                <div id="typed-strings">
+                    <p>Welcome To HMS! <strong><?php $name =  $_SESSION['logged_in']['name'];
+                                                     $first_name = explode('@', $name);
+                                                     echo $first_name['0'];
+                                                     ?></strong></p>
+                    <p>Enjoy the best reports!</p>
+                    <p>Hosteledu.com</p>
+                </div>
+               <h1><span id="typed"></span></h1>
+           </div>
+
+    </header>
+    <!--/Header-->
+
+    
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
+    
+     
+    
+
+    
+    <!-- Max width -->
+    <div class="max-width">
+        <div class="error">
+            <div class="dot-style">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <h1> 404</h1>
+            <p> Page Not Found </p>
+            <a href="spa.php"> Take Me </a>
+        </div>
+
+    </div>
+<!-- /Max Width -->
+
+<!-- Footer -->
+    <footer>
+        <h6> &copy;Copyright 2018-<?= date('Y'); ?> Powered by Muhammad </h6>
+    </footer>
+    <!-- /Footer -->
+
+</body>
+</html>

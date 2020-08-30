@@ -3,4 +3,4 @@
 ![image](2018.png)
 
 
-# I'll look into as I forgot all about PHP
+# I'll look into this as I'v forgotten all about PHP
